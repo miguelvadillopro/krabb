@@ -8,23 +8,6 @@ struct CommandView {
     args: Vec<String>
 }
 
-enum PreviousOutput{
-    PrevCommand(String),
-    NoPrevCommand
-}
-
-
-enum Arguments{
-    OneArgument(String),
-    MultipleArguments(Vec<String>),
-    NoArguments
-}
-
-enum ListCommands{
-    List(String),
-    Empty
-}
-
 fn split_command(input: String) -> (String, Vec<String>, String){
     let split: Vec<&str> = input.splitn(2," | ").collect();
 
